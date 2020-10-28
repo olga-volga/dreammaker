@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Dreammaker</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$('.header__burger').click(function(event) {
+					$('.header__burger, .header__menu').toggleClass('active');
+					$('body').toggleClass('lock');
+				});
+				$('.header__menu').click(function(event) {
+					$('.header__burger, .header__menu').removeClass('active');
+					$('body').removeClass('lock');
+				});
+				$(document).ready(function() {
+					$('#accordeon .item__wrap').on('click', show_func);
+				});
+				function show_func(){
+				    $('#accordeon .item__answer').not($(this).next());
+				    $(this).next().toggleClass("show");
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<main class="main">
+				<div class="container">
+					<div class="header-body">
+						<div class="header-logo">
+							<img src="img/main/logo.svg">
+							<a href="" class="header__logo">Dreammaker</a>
+						</div>
+						<div class="header__burger">
+							<span></span>
+						</div>
+						<nav class="header__menu">
+							<ul class="header__list">
+								<li><a href="" class="header__link">Home</a></li>
+								<li><a href="#features" class="header__link">About us</a></li>
+								<li><a href="#technology" class="header__link">Service</a></li>
+								<li><a href="#contact" class="header__link">Setting</a></li>
+							</ul>
+						</nav>
+						<div class="header-button">
+							<a href="" class="header__btn btn btn--menu">Contact us</a>
+						</div>
+					</div>
+					<div class="main-body">
+						<h1 class="main__title">Your awesome Dream maker consultant</h1>
+						<p class="main__text">The occupational traffic permit is one of the most important things in the company when carrying out freight transport. In fact, it is a prerequisite for doing business traffic at all.</p>
+						<div class="main-button">
+							<a href="" class="main__btn btn">Get started</a>
+						</div>
+					</div>
+				</div>
+			</main>
+			<div class="content">
+				<section class="service">
+					<div class="service-container">
+						<h2 class="service__title title--h2">We provide great Service</h2>
+						<p class="service__text">The occupational traffic permit is one of the most important things in the company <br>when carrying out freight transport. In fact, it is a <br>prerequisite for doing business traffic at all.</p>
+						<div class="service-row">
+							<div class="service__column">
+								<div class="service-column__item">
+									<img src="img/service/icons/01.svg" alt="" class="service-item__img">
+									<h3 class="service-item__title">Web design</h3>
+									<p class="service-item__text">Here you can find all web design and all of yours designing meterials</p>
+									<div class="service-item__bottom"></div>
+								</div>
+							</div>
+							<div class="service__column">
+								<div class="service-column__item">
+									<img src="img/service/icons/02.svg" alt="" class="service-item__img">
+									<h3 class="service-item__title">Health and study</h3>
+									<p class="service-item__text">Here you can find all your primary health your good health and education</p>
+								</div>
+							</div>
+							<div class="service__column">
+								<div class="service-column__item">
+									<img src="img/service/icons/03.svg" alt="" class="service-item__img">
+									<h3 class="service-item__title">Packaging</h3>
+									<p class="service-item__text">Consistency in packaging matter a lot. Give your attention match design elements</p>
+								</div>
+							</div>
+							<div class="service__column">
+								<div class="service-column__item">
+									<img src="img/service/icons/04.svg" alt="" class="service-item__img">
+									<h3 class="service-item__title">Content writing</h3>
+									<p class="service-item__text">It can be understood that your fonts, sizes, headings, sub-headings, and button</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="support">
+					<div class="container">
+						<div class="support-body">
+							<div class="support-column__txt">
+								<div class="support-column__item">
+									<h2 class="support__title title--h2">The People are quick turnaround here</h2>
+									<p class="support__text">The occupational traffic permit is one of the most <br>things in the company. How do you do when <br>a commercial traffic permit for freight <br>transport to your business?</p>
+								</div>
+							</div>
+							<div class="support-column__img">
+								<img src="img/support/01.png" alt="" class="support__img">
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="demo">
+					<div class="container">
+						<div class="section__line"></div>
+						<h2 class="demo__title title--h2--brown">First see how to expand <br>or our demo</h2>
+					</div>
+					<div class="demo__img">
+						<img src="img/demo/01.jpg" alt="">
+						<div class="play-btn">
+							<a href="" class="play__btn"><i class="fa fa-caret-right"></i></a>
+						</div>
+					</div>
+				</section>
+				<section class="questions">
+					<div class="container">
+						<div class="questions-body">
+							<div class="questions__column">
+								<div class="questions-column__item">
+									<div class="section__line"></div>
+									<h2 class="questions__title title--h2--brown">Your Questions and <br>Answers are always ready:</h2>
+									<ul id="accordeon" class="questions-list">
+										<li class="list__item">
+											<div class="item__wrap">
+												<p class="question">What is a professional traffic permit?</p>
+												<div class="arrow"><img src="img/questions/arrows/arrow__r.png" alt=""></div>
+											</div>
+											<div class="item__answer">
+												<p>Traffic permits are a requirement for conducting professional traffic.</p>
+											</div>
+										</li>
+										<li class="list__item">
+											<div class="item__wrap">
+												<p class="question">How to check the traffic condition?</p>
+												<div class="arrow"><img src="img/questions/arrows/arrow__r.png" alt=""></div>
+											</div>
+											<div class="item__answer">
+												<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, iusto.</p>
+											</div>
+										</li>
+										<li class="list__item">
+											<div class="item__wrap">
+												<p class="question">What are the requirements for a professional traffic permit?</p>
+												<div class="arrow"><img src="img/questions/arrows/arrow__r.png" alt=""></div>
+											</div>
+											<div class="item__answer">
+												<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, iusto.</p>
+											</div>
+										</li>
+										<li class="list__item">
+											<div class="item__wrap">
+												<p class="question">Are there professional traffic permit training courses at a distance?</p>
+												<div class="arrow"><img src="img/questions/arrows/arrow__r.png" alt=""></div>
+											</div>
+											<div class="item__answer">
+												<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, iusto.</p>
+											</div>
+										</li>
+										<li class="list__item">
+											<div class="item__wrap">
+												<p class="question">Where to look for a traffic permit?</p>
+												<div class="arrow"><img src="img/questions/arrows/arrow__r.png" alt=""></div>
+											</div>
+											<div class="item__answer">
+												<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, iusto.</p>
+											</div>
+										</li>
+										<li class="list__item">
+											<div class="item__wrap">
+												<p class="question">Are there differences between a traffic permit and a professional traffic permit?</p>
+												<div class="arrow"><img src="img/questions/arrows/arrow__r.png" alt=""></div>
+											</div>
+											<div class="item__answer">
+												<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, iusto.</p>
+											</div>
+										</li>
+										<li class="list__item">
+											<div class="item__wrap">
+												<p class="question">When is a professional traffic permit needed?</p>
+												<div class="arrow"><img src="img/questions/arrows/arrow__r.png" alt=""></div>
+											</div>
+											<div class="item__answer">
+												<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, iusto.</p>
+											</div>
+										</li>
+									</ul>
+								</div>	
+							</div>
+							<div class="questions__column">
+								<div class="questions-column__item">
+									<div class="column__img"><img src="img/questions/01.jpg" alt=""></div>
+									<ul id="accordeon" class="questions-list">
+										<li class="list__item">
+											<div class="item__wrap">
+												<p class="question">When is a professional traffic permit needed?</p>
+												<div class="arrow"><img src="img/questions/arrows/arrow__r.png" alt=""></div>
+											</div>
+											<div class="item__answer">
+												<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In ipsam, quibusdam nisi corporis labore ut vero numquam temporibus ipsum adipisci totam quisquam.</p>
+											</div>
+										</li>
+										<li class="list__item">
+											<div class="item__wrap">
+												<p class="question">Where to look for a traffic permit?</p>
+												<div class="arrow"><img src="img/questions/arrows/arrow__r.png" alt=""></div>
+											</div>
+											<div class="item__answer">
+												<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus dicta dignissimos accusantium esse nihil voluptas!</p>
+											</div>
+										</li>
+										<li class="list__item">
+											<div class="item__wrap item__wrap--right">
+												<p class="question">Are there differences between a traffic permit and a professional traffic permit?</p>
+												<div class="arrow"><img src="img/questions/arrows/arrow__r.png" alt=""></div>
+											</div>
+											<div class="item__answer">
+												<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus dicta dignissimos accusantium esse nihil voluptas!</p>
+											</div>
+										</li>
+										<li class="list__item">
+											<div class="item__wrap item__wrap--right">
+												<p class="question">How much does a commercial traffic permit cost for goods?</p>
+												<div class="arrow"><img src="img/questions/arrows/arrow__r.png" alt=""></div>
+											</div>
+											<div class="item__answer">
+												<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus dicta dignissimos accusantium esse nihil voluptas!</p>
+											</div>
+										</li>
+										<li class="list__item">
+											<div class="item__wrap item__wrap--right">
+												<p class="question">How to plug in for the traffic permit test?</p>
+												<div class="arrow"><img src="img/questions/arrows/arrow__r.png" alt=""></div>
+											</div>
+											<div class="item__answer">
+												<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus dicta dignissimos accusantium esse nihil voluptas!</p>
+											</div>
+										</li>
+										<li class="list__item">
+											<div class="item__wrap item__wrap--right">
+												<p class="question">How is the sample for a professional traffic permit booked?</p>
+												<div class="arrow"><img src="img/questions/arrows/arrow__r.png" alt=""></div>
+											</div>
+											<div class="item__answer">
+												<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus dicta dignissimos accusantium esse nihil voluptas!</p>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="questions-button">
+							<a href="" class="questions__btn btn btn--big">Load more</a>
+						</div>
+					</div>
+				</section>
+				<section class="feature">
+					<div class="container">
+						<h2 class="feature__title title--h2">Best Feature in the world</h2>
+						<p class="feature__text">Here you get the best featured in the world and you can do the best thing when carrying out freight transport. In fact, it is a</p>
+						<div class="feature-body">
+							<div class="feature__column">
+								<div class="feature__item">
+									<div class="feature-item__img">
+										<img src="img/feature/body/01.jpg" alt="">
+									</div>
+									<h3 class="feature-item__title">Customer</h3>
+									<p class="feature-item__text">The occupational traffic permit is one things in the company. How do you a commercial traffic permit for freight transport to your business?</p>
+									<div class="item-button">
+										<a href="" class="item__btn btn btn--small">Refer anyone</a>
+									</div>
+								</div>
+							</div>
+							<div class="feature__column">
+								<div class="feature__item">
+									<div class="feature-item__img">
+										<img src="img/feature/body/02.jpg" alt="">
+									</div>
+									<h3 class="feature-item__title">Provider</h3>
+									<p class="feature-item__text">The occupational traffic permit is one things in the company. How do you a commercial traffic permit for freight transport to your business?</p>
+									<div class="item-button">
+										<a href="" class="item__btn btn btn--small red">Learn more</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="feature-bottom">
+						<div class="bottom__column">
+							<div class="bottom-item__img">
+								<img src="img/feature/bottom/01.png" alt="">
+							</div>
+						</div>
+						<div class="bottom__column">
+							<div class="bottom-item__txt">
+								<h2 class="bottom__title title--h2">Best Feature in the world</h2>
+								<p class="bottom__text">Here you get the best featured in the world and you can do the best thing when carrying out freight transport. In fact, it is a</p>
+								<img src="img/feature/bottom/02.png" alt="" class="bottom__img">
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="join">
+					<div class="container">
+						<div class="section__line"></div>
+						<h2 class="join__title title--h2--brown">Please join with us & get <br>all kind of benifit</h2>
+						<div class="join-form">
+							<form action="#" class="form-body">
+								<div class="form__line">
+									<label for="fname">Name</label>
+									<input type="text" id="fname" name="form[]" placeholder="Name" class="input" />
+								</div>
+								<div class="form__line">
+									<label for="password">Password</label>
+									<input type="text" id="password" name="form[]" placeholder="Your email address" class="input" />
+								</div>
+								<div class="form__button">
+									<input type="submit" value="SIGN IN" class="form__btn btn btn--form">
+								</div>
+							</form>
+							<span class="join__text">Don’t have an account ?&nbsp;</span>
+							<a href="" class="join__link">Sign up here</a>
+						</div>
+					</div>
+				</section>
+			</div>
+			<footer class="footer">
+				<div class="container">
+					<div class="footer-top">
+						<div class="footer-top__column">
+							<div class="footer-column__item">
+								<h4 class="footer-column__title">Learn More</h4>
+								<ul class="footer-column__list">
+									<li class="footer-list__item">
+										<a href="" class="footer-column__link">Sell Fast</a>
+									</li>
+									<li class="footer-list__item">
+										<a href="" class="footer-column__link">Buy Now</a>
+									</li>
+									<li class="footer-list__item">
+										<a href="" class="footer-column__link">Membership</a>
+									</li>
+									<li class="footer-list__item">
+										<a href="" class="footer-column__link">Banner Ads</a>
+									</li>
+									<li class="footer-list__item">
+										<a href="" class="footer-column__link">Promotions</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="footer-top__column">
+							<div class="footer-column__item">
+								<h4 class="footer-column__title">Help & Support</h4>
+								<ul class="footer-column__list">
+									<li class="footer-list__item">
+										<a href="" class="footer-column__link">FAQ</a>
+									</li>
+									<li class="footer-list__item">
+										<a href="" class="footer-column__link">Stay Safe</a>
+									</li>
+									<li class="footer-list__item">
+										<a href="" class="footer-column__link">Contact us</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="footer-top__column">
+							<div class="footer-column__item">
+								<h4 class="footer-column__title">Social</h4>
+								<ul class="footer-column__list">
+									<li class="footer-list__item">
+										<a href="" class="footer-column__link">Blog</a>
+									</li>
+									<li class="footer-list__item">
+										<a href="" class="footer-column__link">Facebook</a>
+									</li>
+									<li class="footer-list__item">
+										<a href="" class="footer-column__link">Twitter</a>
+									</li>
+									<li class="footer-list__item">
+										<a href="" class="footer-column__link">Youtube</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="footer-top__column">
+							<div class="footer-column__item">
+								<h4 class="footer-column__title">About us</h4>
+								<ul class="footer-column__list">
+									<li class="footer-list__item">
+										<a href="" class="footer-column__link">About us</a>
+									</li>
+									<li class="footer-list__item">
+										<a href="" class="footer-column__link">Career</a>
+									</li>
+									<li class="footer-list__item">
+										<a href="" class="footer-column__link">Terms and Conditions</a>
+									</li>
+									<li class="footer-list__item">
+										<a href="" class="footer-column__link">Privacy Policy</a>
+									</li>
+									<li class="footer-list__item">
+										<a href="" class="footer-column__link">Sitemap</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="footer-bottom">
+						<div class="footer-bottom__text">
+							<p class="copyright__txt">Copyright &copy; 2019</p>
+						</div>
+						<div class="footer-bottom__social">
+							<div class="social-links">
+								<a href="" class="social__link">
+									<img src="img/footer/social/01.svg" alt="">
+								</a>
+								<a href="" class="social__link">
+									<img src="img/footer/social/02.svg" alt="">
+								</a>
+								<a href="" class="social__link">
+									<img src="img/footer/social/03.svg" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="footer-bottom__logo">
+							<img src="img/footer/logo.svg" alt="">
+							<a href="" class="footer__logo">Dreammaker</a>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>
